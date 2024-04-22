@@ -1,0 +1,16 @@
+{
+  "name": "h",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\"> 🎊 🎊 Robô para Sorteio Instagram 🎊 🎊 </h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^3.1.0"
+  },
+  "keywords": []
+}
