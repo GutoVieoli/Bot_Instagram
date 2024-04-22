@@ -67,7 +67,7 @@ const comment = async (link, textComment , quantTagInstagramProfiles) => {
             }
             console.log(qtd_comentarios);
             qtd_comentarios++;
-            await page.waitFor(randomInt(6078, 11078));
+            await page.waitFor(randomInt(5078, 10078));
         }     
 
         await browser.close();
