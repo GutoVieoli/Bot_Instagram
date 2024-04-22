@@ -42,8 +42,8 @@ const comment = async (link, textComment , quantTagInstagramProfiles) => {
 
        
         await page.waitForSelector('form#loginForm');
-        await page.type("input[aria-label='Telefone, nome de usuário ou email']", LOGIN_INSTAGRAM, { delay: 100 });
-        await page.type("input[aria-label='Senha']", SENHA_INSTAGRAM, { delay: 100 });
+        await page.type("input[aria-label='Telefone, nome de usuário ou email']", LOGIN_INSTAGRAM, { delay: 150 });
+        await page.type("input[aria-label='Senha']", SENHA_INSTAGRAM, { delay: 150 });
         await page.click("form#loginForm button[type='submit']");
 
 
@@ -56,10 +56,10 @@ const comment = async (link, textComment , quantTagInstagramProfiles) => {
         await page.waitForSelector('textarea[aria-label="Adicione um comentário..."]');
         var qtd_comentarios = 0;
 
-        for(let i = 0; i < 50; i++){
+        for(let i = 0; i < 25; i++){
             let pos = randomInt(0,profiles.length);
             let comentario = profiles[pos].ig;
-            await page.type('textarea[aria-label="Adicione um comentário..."]', comentario, { delay: randomInt(300, 600) });
+            await page.type('textarea[aria-label="Adicione um comentário..."]', comentario, { delay: randomInt(200, 500) });
             await page.waitForXPath('//div[contains(text(), "Publicar") and @role="button"]');
             const buttons = await page.$x('//div[contains(text(), "Publicar") and @role="button"]');
             if (buttons.length > 0) {
