@@ -56,7 +56,7 @@ const comment = async (link, textComment , quantTagInstagramProfiles) => {
         await page.waitForSelector('textarea[aria-label="Adicione um comentário..."]');
         var qtd_comentarios = 0;
 
-        for(let i = 0; i < 25; i++){
+        for(let i = 0; i < 50; i++){
             let pos = randomInt(0,profiles.length);
             let comentario = profiles[pos].ig;
             await page.type('textarea[aria-label="Adicione um comentário..."]', comentario, { delay: randomInt(200, 500) });
@@ -67,7 +67,7 @@ const comment = async (link, textComment , quantTagInstagramProfiles) => {
             }
             console.log(qtd_comentarios);
             qtd_comentarios++;
-            await page.waitFor(randomInt(5078, 10078));
+            await page.waitFor(randomInt(4078, 7078));
         }     
 
         await browser.close();
